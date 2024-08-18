@@ -46,3 +46,27 @@
 .descripcion {
     font-size: 14px;
 }
+
+.sticky-button {
+    position: fixed;
+    bottom: 20px; /* Ajusta la distancia desde el fondo */
+    right: 20px; /* Ajusta la distancia desde la derecha */
+    width: 60px; /* Ajusta el tamaño del botón */
+    height: 60px;
+    background-color: #866C35; /* Color de fondo */
+    border-radius: 50%; /* Redondea los bordes */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sticky-button img {
+    width: 50%; /* Ajusta el tamaño de la imagen dentro del botón */
+    height: auto;
+}
+
+.sticky-button:hover {
+    transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón */
+}
