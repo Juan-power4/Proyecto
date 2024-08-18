@@ -1,9 +1,10 @@
-/* Eliminar scroll por desbordamiento */
+/* General Styles */
 body {
     margin: 0;
     padding: 0;
     background-color: #D69E32;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    overflow-x: hidden; 
+    font-family: 'Questrial', sans-serif;
 }
 
 header.header {
@@ -14,11 +15,11 @@ header.header {
 .main {
     background-color: #D69E32;
     background-image: url(/Imagenes/Menu/cafesFondo.png);
-    font-family: 'Questrial', sans-serif;
     text-align: center;
     margin: 40px 0;
 }
 
+/* Header */
 h1 {
     color: white; 
     position: relative;
@@ -27,39 +28,75 @@ h1 {
     margin-bottom: 20px;
     font-size: 2em;
     text-align: left;
-    display: flex; /* Usamos flexbox para alinear el texto y la línea */
-    align-items: center; /* Centra verticalmente el texto y la línea */
+    display: flex;
+    align-items: center;
 }
 
 h1::after {
     content: '';
-    flex-grow: 1; /* La línea ocupará todo el espacio restante */
+    flex-grow: 1;
     margin-left: 5rem;
-    margin-right: 40px; /* Asegura que la línea termine 10px antes del borde derecho */
+    margin-right: 40px;
     height: 2px;
     background-color: white;
-    max-width: calc(100% - 20px); /* Limita la longitud total de la línea para evitar que llegue al borde */
+    max-width: calc(100% - 20px);
 }
 
-.platos-container {
+.carousel-container {
+    position: relative;
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
-    color: black;
+    align-items: center;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
 }
 
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 50px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+.carousel::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.carousel-button {
+    border: none;
+    background: none;
+    color: #8B4513;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.carousel-button.left {
+    left: -50px;
+}
+
+.carousel-button.right {
+    right: -50px;
+}
+
+/* Plato Styles */
 .plato {
+    min-width: 220px;
     border-radius: 20px;
     padding: 20px;
-    width: 220px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: #f7d154;
 }
 
 .plato:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    transition: transform 0.2s;
 }
 
 .plato img {
@@ -83,16 +120,17 @@ h1::after {
     font-size: 14px;
 }
 
+/* Sticky Button */
 .sticky-button {
     position: fixed;
-    bottom: 20px; 
-    right: 20px; 
+    bottom: 20px;
+    right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #866C35; 
+    background-color: #866C35;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 1000; 
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
