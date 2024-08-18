@@ -1,0 +1,211 @@
+body {
+    font-family: 'Questrial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+    overflow: hidden; /* Evita el scroll no deseado */
+}
+
+.cart-summary {
+    background-color: #8B4513;
+    color: #E5DEC2;
+    padding: 20px;
+    border-radius: 10px 0 0 10px;
+    width: 30%; /* Cambiado a 30% del ancho de la pantalla */
+    max-width: 500px; /* Opcional: ajusta el máximo si es necesario */
+    height: 100vh; /* Asegura que ocupe el 100% de la pantalla */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow-y: auto; /* Permite scroll en caso de que el contenido sea demasiado alto */
+}
+
+.cart-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%; /* Ajustado para que ocupe el 30% del ancho */
+    height: 100%;
+    background-color: #8B4513;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.cart-overlay.active {
+    transform: translateX(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #E5DEC2;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.cart-summary h1 {
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #E6DFC3;
+    padding: 10px 0;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    border-bottom: 2px solid #E6DFC3;
+}
+
+.cart-items {
+    flex-grow: 1;
+    overflow-x: auto; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    align-items: start;
+}
+
+.item {
+    display: flex;
+    flex-direction: row; 
+    background-color: #a0522d;
+    padding: 10px; /* Reduce el padding dentro de cada producto */
+    border-radius: 5px; /* Reducción del borde redondeado */
+    min-width: 300px; 
+    margin-bottom: 2px; /* Espacio mínimo debajo de cada producto */
+}
+
+.item-details {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.item-details img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 10px; /* Reduce el espacio entre la imagen y el texto */
+}
+
+.item-details h2 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 2px; /* Reduce el margen debajo del título */
+    font-family: 'Questrial', sans-serif;
+    color: #E5DEC2;
+}
+
+.item-details p {
+    font-size: 14px;
+    margin: 0;
+    line-height: 1.2; /* Reduce el espacio entre líneas */
+    font-family: 'Questrial', sans-serif;
+    color: #E5DEC2;
+}
+
+.item-price {
+    text-align: right;
+    margin-left: auto; 
+    color: #E5DEC2;
+}
+
+.item-price p {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 2px; /* Reduce el margen debajo del precio */
+    font-family: 'Questrial', sans-serif;
+    color: #E5DEC2;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px; /* Reduce el espacio debajo del control de cantidad */
+    color: #E5DEC2;
+}
+
+.quantity-control button {
+    background-color: #ffe5b4;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    color: #8B4513;
+    cursor: pointer;
+    margin: 0 5px; /* Reduce el espacio entre los botones de control */
+}
+
+.quantity-control span {
+    font-size: 18px;
+    margin: 0 5px; /* Reduce el espacio alrededor del número de cantidad */
+    font-family: 'Questrial', sans-serif;
+    color: #E5DEC2;
+}
+
+.remove {
+    color: #E5DEC2;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Questrial', sans-serif;
+}
+
+.summary {
+    padding-top: 20px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8B4513;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 0;
+    color: #E5DEC2;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 16px;
+    font-family: 'Questrial', sans-serif;
+    color: #E5DEC2;
+}
+
+.summary h3 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; /* Reduce el margen superior */
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+    color: #E5DEC2;
+    padding-top: 10px;
+    border-top: 2px solid #E6DFC3; 
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #f6c66c;
+    color: #E5DEC2;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px; /* Sube un poco el botón alejándolo del borde */
+    font-family: 'Questrial', sans-serif;
+    text-transform: uppercase;
+}
+
+.checkout-btn:hover {
+    background-color: #ffe5b4; 
+}
