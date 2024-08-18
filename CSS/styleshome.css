@@ -1,80 +1,93 @@
+/* CSS: /CSS/styleshome.css */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f0e6d6;
+    font-family: 'Anton', sans-serif;
+    background-color: #D69E32;
 }
 
 .container {
     display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
     height: 100vh;
 }
 
 .left-section {
-    background-color: #d0982b;
-    color: #4a2906;
-    padding: 20px;
-    width: 50%;
+    width: 40%;
+    color: #3C2E26;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: center; /* Centra verticalmente el contenido */
+    align-items: center; /* Asegura que todo esté centrado horizontalmente */
 }
 
 .left-section h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: 3em;
+    font-size: 4em;
+    margin-bottom: 40px; /* Espacio adicional para separar del primer botón */
     text-align: center;
-    margin-bottom: 100px;
+    font-family: 'Anton', sans-serif;
 }
 
-.button-list {
-    list-style-type: none;  
-    padding: 0;             
-    margin: 0;              
-}
-
-.button-list li {
-    margin-bottom: 50px;
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Centra los botones horizontalmente */
 }
 
 .btn {
-    display: block;
-    background-image: url('/Imagenes/Home/botones.png');
-    background-size: cover;
+    padding: 15px 40px;
+    background-color: transparent;
+    background-image: url(/Imagenes/Home/botones.png);
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    width: 340px; /* Ajusta según el tamaño de tu imagen */
-    height: 100px; /* Ajusta según el tamaño de tu imagen */
-    text-decoration: none;
     border: none;
-    text-align: center;
-    color: #ede1b7;
+    border-radius: 10px;
+    color: #EDE1B7;
+    font-size: 1.2em;
     font-family: 'Anton', sans-serif;
-    font-size: 1.5em;
-    line-height: 100px; /* Asegura que el texto esté centrado verticalmente */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    max-width: 450px;
+    min-width: 450px; /* Asegura que todos los botones tengan el mismo ancho */
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Opcional: Efecto hover */
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+.btn img {
+    margin-right: 10px;
+    vertical-align: middle;
+    height: 24px;
 }
 
 .right-section {
-    width: 80%;
-    background-image: url('/Imagenes/Home/background.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 60%;
+    position: relative;
+    text-align: right;
+    height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to right, #D69E32 0%, transparent 4%);
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .logo {
     position: absolute;
-    top: -10%;
-    left: 65%;
-    max-width: 100%;
+    top: -5%;
+    right: 15%;
+    width: 350px;
     height: auto;
 }
