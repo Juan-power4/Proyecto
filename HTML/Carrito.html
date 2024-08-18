@@ -24,101 +24,14 @@
     <main>
         <div class="container">
             <h1>Mi Pedido</h1>
-            <div class="cart">
-                <div class="cart-header">
-                    <span class="header-product">Producto</span>
-                    <span class="header-quantity">Cantidad</span>
-                    <span class="header-price">Precio</span>
-                </div>
-                <div class="cart-item">
-                    <div class="product">
-                        <img src="/Imagenes/Menu/lechona-tolimense-plato.png" alt="Lechona Tolimense">
-                        <span>Lechona Tolimense</span>
-                    </div>
-                    <div class="quantity-container">
-                        <div class="quantity">
-                            <button class="minus">-</button>
-                            <input type="number" value="1" readonly>
-                            <button class="plus">+</button>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <div class="price">$28.000</div>
-                    </div>
-                </div>
-                
-                <div class="cart-item">
-                    <div class="product">
-                        <img src="/Imagenes/Menu/limonada-panela-bebidas.png" alt="Limonada de Panela">
-                        <span>Limonada de Panela</span>
-                    </div>
-                    <div class="quantity-container">
-                        <div class="quantity">
-                            <button class="minus">-</button>
-                            <input type="number" value="1" readonly>
-                            <button class="plus">+</button>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <div class="price">$7.000</div>
-                    </div>
-                </div>
-
-                <div class="cart-item">
-                    <div class="product">
-                        <img src="/Imagenes/Menu/bandeja-paisa-plato.png" alt="Bandeja Paisa">
-                        <span>Bandeja Paisa</span>
-                    </div>
-                    <div class="quantity-container">
-                        <div class="quantity">
-                            <button class="minus">-</button>
-                            <input type="number" value="1" readonly>
-                            <button class="plus">+</button>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <div class="price">$58.000</div>
-                    </div>
-                </div>
-
-                <div class="cart-item">
-                    <div class="product">
-                        <img src="/Imagenes/Menu/oblea-postre.png" alt="Oblea">
-                        <span>Oblea</span>
-                    </div>
-                    <div class="quantity-container">
-                        <div class="quantity">
-                            <button class="minus">-</button>
-                            <input type="number" value="1" readonly>
-                            <button class="plus">+</button>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <div class="price">$6.500</div>
-                    </div>
-                </div>
-
-                <div class="cart-item">
-                    <div class="product">
-                        <img src="/Imagenes/Menu/empanadas-vallunas-entrada.png" alt="Empanadas Vallunas">
-                        <span>Empanadas Vallunas</span>
-                    </div>
-                    <div class="quantity-container">
-                        <div class="quantity">
-                            <button class="minus">-</button>
-                            <input type="number" value="1" readonly>
-                            <button class="plus">+</button>
-                        </div>
-                    </div>
-                    <div class="price-container">
-                        <div class="price">$12.000</div>
-                    </div>
-                </div>
+            <div class="cart" id="cart-container">
+                <!-- Aquí se renderizarán los items del carrito -->
+            </div>
 
             <div class="summary">
-                <div>Subtotal: <span id="subtotal">$10.00</span></div>
-                <div>IVA (19%): <span id="tax">$1.90</span></div>
-                <div>Total: <span id="total">$11.90</span></div>
+                <div>Subtotal: <span id="subtotal">$0.00</span></div>
+                <div>IVA (19%): <span id="tax">$0.00</span></div>
+                <div>Total: <span id="total">$0.00</span></div>
             </div>
         </div>
     </main>
@@ -143,4 +56,5 @@
         </div>
     </footer>
 </body>
+<script src="Carrito.js" defer></script> <!-- Se cargará el script después del DOM -->
 </html>
