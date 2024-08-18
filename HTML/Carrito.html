@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Pinta</title>
+    <title>La Pinta - Mi Pedido</title>
     <link rel="stylesheet" href="/CSS/carrito.css">
     <link rel="stylesheet" href="/CSS/Header&Footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
@@ -20,25 +20,109 @@
             <button onclick="location.href='Conocenos.html'">Conócenos</button>
         </nav>
     </header>
+    
+    <main>
+        <div class="container">
+            <h1>Mi Pedido</h1>
+            <div class="cart">
+                <div class="cart-header">
+                    <span class="header-product">Producto</span>
+                    <span class="header-quantity">Cantidad</span>
+                    <span class="header-price">Precio</span>
+                </div>
+                <div class="cart-item">
+                    <div class="product">
+                        <img src="/Imagenes/Menu/lechona-tolimense-plato.png" alt="Lechona Tolimense">
+                        <span>Lechona Tolimense</span>
+                    </div>
+                    <div class="quantity-container">
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" readonly>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">$28.000</div>
+                    </div>
+                </div>
+                
+                <div class="cart-item">
+                    <div class="product">
+                        <img src="/Imagenes/Menu/limonada-panela-bebidas.png" alt="Limonada de Panela">
+                        <span>Limonada de Panela</span>
+                    </div>
+                    <div class="quantity-container">
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" readonly>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">$7.000</div>
+                    </div>
+                </div>
 
-    <div class="container">
-        <h1>Mi Pedido </h1>
-        <div class="cart">
-            <div class="cart-item">
-                <div class="product">
-                    <img src="/Imagenes/Menu/lechona-tolimense-plato.png" alt="lechona-tolimense-plato">
-                    <span>Lechona Tolimense</span>
+                <div class="cart-item">
+                    <div class="product">
+                        <img src="/Imagenes/Menu/bandeja-paisa-plato.png" alt="Bandeja Paisa">
+                        <span>Bandeja Paisa</span>
+                    </div>
+                    <div class="quantity-container">
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" readonly>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">$58.000</div>
+                    </div>
                 </div>
-                <div class="quantity">
-                    <button class="minus">-</button>
-                    <input type="number" value="1" readonly>
-                    <button class="plus">+</button>
+
+                <div class="cart-item">
+                    <div class="product">
+                        <img src="/Imagenes/Menu/oblea-postre.png" alt="Oblea">
+                        <span>Oblea</span>
+                    </div>
+                    <div class="quantity-container">
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" readonly>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">$6.500</div>
+                    </div>
                 </div>
-                <div class="price">$10.00</div>
+
+                <div class="cart-item">
+                    <div class="product">
+                        <img src="/Imagenes/Menu/empanadas-vallunas-entrada.png" alt="Empanadas Vallunas">
+                        <span>Empanadas Vallunas</span>
+                    </div>
+                    <div class="quantity-container">
+                        <div class="quantity">
+                            <button class="minus">-</button>
+                            <input type="number" value="1" readonly>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                    <div class="price-container">
+                        <div class="price">$12.000</div>
+                    </div>
+                </div>
+
+            <div class="summary">
+                <div>Subtotal: <span id="subtotal">$10.00</span></div>
+                <div>IVA (19%): <span id="tax">$1.90</span></div>
+                <div>Total: <span id="total">$11.90</span></div>
             </div>
-    </div>
-
-
+        </div>
+    </main>
+    
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
@@ -47,7 +131,7 @@
                 </a>
                 <div class="footer-address">
                     <p><strong>Dirección:</strong> Cra 69 #25B – 44 Of. 609,<br>Edificio World Business Port</p>
-        <p><strong>Teléfono:</strong> 601 7034250</p>
+                    <p><strong>Teléfono:</strong> 601 7034250</p>
                 </div>
             </div>
             <div class="footer-right">

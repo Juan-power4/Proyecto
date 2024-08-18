@@ -1,26 +1,26 @@
 body {
-    font-family: 'Anton', sans-serif,'Questrial' ;
+    font-family: 'Questrial', sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-
-
-.container{
+.container {
     background-color: #D69E32;
     background-image: url(/Imagenes/Carrito/cafesFondo.png);
-    background-size: center;
+    background-size: cover;
     background-position: center;
+    flex-grow: 1;
     display: flex;
-    justify-content: flex-start; /* Centra el contenido horizontalmente */
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    padding: 20px;
 }
 
-h1{
-    position: relative;
-    top: -250px; /* Mueve hacia arriba */
-    left: 60px; /* Mueve hacia la derecha */
+h1 {
+    margin-bottom: 20px; /* Separa el título del carrito */
     font-size: 54px;
     border-bottom: 2px solid black;
     color: #3C2E26;
@@ -29,43 +29,69 @@ h1{
 .cart {
     width: 80%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: -200px; /* Alinea con el título */
+    margin-top: 20px;
+}
+
+.cart-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr; /* Ajusta la proporción de columnas */
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 2px solid #3C2E26;
+    font-weight: bold;
+    color: #3C2E26;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.header-product, .header-quantity, .header-price {
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
 }
 
 .cart-item {
     display: flex;
-    align-items: center;
+    align-items: flex-end; /* Alinea al final verticalmente */
     padding: 15px 0;
     border-bottom: 1px solid #ccc;
-    font-family: 'Questrial', sans-serif; /* Fuente consistente */
-    color: #3C2E26; /* Mismo color que el título */
+    color: #3C2E26;
 }
 
 .product {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex: 2; /* Ajusta el ancho de la columna del producto */
 }
 
 .product img {
-    width: 60px;
-    height: 60px;
-    border-radius: 10px; /* Bordes redondeados */
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
     object-fit: cover;
+}
+
+.quantity-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Ajusta el ancho de la columna de cantidad */
+    margin-bottom: 30px;
 }
 
 .quantity {
     display: flex;
+    flex-direction: row; /* Botones en fila */
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .quantity input {
-    width: 40px;
+    width: 50px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -86,7 +112,15 @@ h1{
 }
 
 .quantity button:hover {
-    background-color: #b58229; /* Color más oscuro al pasar el cursor */
+    background-color: #b58229;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Ajusta el ancho de la columna de precio */
+    margin-bottom: 30px;
 }
 
 .price {
@@ -98,7 +132,7 @@ h1{
 .summary {
     margin-top: 30px;
     text-align: right;
-    font-size: 18px;
+    font-size: 28px;
     color: #3C2E26;
     font-family: 'Questrial', sans-serif;
 }
