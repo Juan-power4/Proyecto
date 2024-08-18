@@ -1,0 +1,59 @@
+body {
+    font-family: 'Anton', sans-serif,'Questrial' ;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.header {
+    background-color: #8B4513;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.nav-menu button {
+    background-color: transparent;
+    border: none;
+    color: #EDE1B7;
+    font-family: Questrial, sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu button:hover {
+    color: #D69E32;
+}
+
+.nav-menu button::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #EDE1B7;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu button.active::after,
+.nav-menu button:hover::after {
+    width: 100%;
+}
