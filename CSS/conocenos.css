@@ -27,6 +27,7 @@ body {
 }
 
 a.BotonHome {
+    font-family: 'Anton', sans-serif;
     margin-top: 20px;
     background: url('/Imagenes/Conocenos/botonMadera.png') no-repeat center;
     background-size: contain;

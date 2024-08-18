@@ -63,6 +63,18 @@ body {
     margin-bottom: 7px;
 }
 
+.buttons .BotonCarta:hover{
+    text-decoration: underline;
+}
+
+.buttons .BotonCarrito:hover{
+    text-decoration: underline;
+}
+
+.buttons .BotonContactanos:hover{
+    text-decoration: underline;
+}
+
 
 .btn {
     padding: 15px 40px;
@@ -93,6 +105,9 @@ body {
     height: 24px;
 }
 
+
+
+
 .right-section {
     width: 60%;
     position: relative;
@@ -120,3 +135,5 @@ body {
     width: 350px;
     height: auto;
 }
+
+
