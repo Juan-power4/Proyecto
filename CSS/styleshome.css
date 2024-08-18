@@ -17,23 +17,52 @@ body {
     color: #3C2E26;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra verticalmente el contenido */
-    align-items: center; /* Asegura que todo esté centrado horizontalmente */
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Imagenes/Home/cafesFondo.png);
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center;
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier padding */
 }
 
+
 .left-section h1 {
-    font-size: 4em;
+    font-size: 3em;
     margin-bottom: 40px; /* Espacio adicional para separar del primer botón */
     text-align: center;
     font-family: 'Anton', sans-serif;
 }
 
-.buttons {
+.buttons a {
+    margin-top: 20px;
+    background: url('/Imagenes/Conocenos/botonMadera.png') no-repeat center;
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el botón */
+    color: #ede1b7;
+    font-size: 25px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center; /* Centra los botones horizontalmente */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    width: 450px; /* Tamaño fijo para el ancho del botón */
+    height: 100px; /* Tamaño fijo para la altura del botón */
+    box-sizing: border-box;
+    padding: 0; /* Elimina el padding para mantener las dimensiones fijas */
 }
+
+.buttons .span{
+    margin-left: 20px;
+}
+
+.buttons .icono {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 7px;
+}
+
 
 .btn {
     padding: 15px 40px;
@@ -70,7 +99,7 @@ body {
     text-align: right;
     height: 100%;
     overflow: hidden;
-    background: linear-gradient(to right, #D69E32 0%, transparent 4%);
+    background: linear-gradient(to right, #D69E32 0%, transparent 15%);
 }
 
 .background {
