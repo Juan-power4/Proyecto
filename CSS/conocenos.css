@@ -98,18 +98,18 @@ a.BotonHome {
 h3 {
     margin: 0;
     font-size: 24px;
-    font-family: 'Anton', sans-serif;
+    font-family: 'Questral', sans-serif;
     color: #4a2906;
 }
 
 p {
     margin: 0;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Questral, sans-serif;
 }
 
 a {
-    color: #000d80;
+    color:  #000d80;
     text-decoration: none;
 }
 
