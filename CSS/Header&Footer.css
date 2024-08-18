@@ -1,0 +1,139 @@
+body {
+    font-family: 'Anton', sans-serif, 'Questrial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.header {
+    background-color: #8B4513;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+.logo img {
+    height: 100px; /* Aumenta un poco la altura del logo */
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.nav-menu button {
+    background-color: transparent;
+    border: none;
+    color: #EDE1B7;
+    font-family: 'Questrial', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu button:hover {
+    color: #D69E32;
+}
+
+.nav-menu button::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #EDE1B7;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu button.active::after,
+.nav-menu button:hover::after {
+    width: 100%;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #8B4513;
+    color: #EDE1B7;
+    padding: 20px 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-address {
+    margin-left: 50px; /* Mueve el texto un poco más a la izquierda */
+    padding-left: 20px; /* Añade más espacio (aire) a la izquierda del texto */
+    font-family: 'Questrial', sans-serif;
+    color: #EDE1B7;
+}
+
+.footer-address p {
+    margin: 10px 0; /* Añade más espacio vertical entre las líneas */
+}
+
+.footer-address p strong {
+    color: #D69E32; /* Color dorado para "Dirección" y "Teléfono" */
+}
+
+.footer-right {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para el botón Conócenos */
+.footer-right h2 {
+    margin: 0;
+    color: #EDE1B7;
+    font-family: 'Questrial', sans-serif;
+    font-size: 24px;
+    border-bottom: 4px solid #EDE1B7;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+    width: 300px;
+    text-align: center;
+}
+
+.footer-right h2:hover {
+    color: #D69E32;
+    border-color: #D69E32;
+}
+
+.footer-right h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilos para la imagen de redes sociales */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-left: -10px; /* Mueve las imágenes un poco a la izquierda */
+}
+
+.footer-social img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
