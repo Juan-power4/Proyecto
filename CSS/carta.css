@@ -1,6 +1,9 @@
+/* Eliminar scroll por desbordamiento */
 body {
     margin: 0;
     padding: 0;
+    background-color: #D69E32;
+    overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
 header.header {
@@ -10,36 +13,37 @@ header.header {
 
 .main {
     background-color: #D69E32;
-    font-family:  'Questrial', sans-serif;
+    font-family: 'Questrial', sans-serif;
     text-align: center;
-    margin: 0;
+    margin: 40px 0;
 }
 
 h1 {
     color: white; 
     position: relative;
-    padding-left: 20px;
+    padding-left: 5rem;
     margin-top: 30px;
     margin-bottom: 20px;
     font-size: 2em;
     text-align: left;
+    display: flex; /* Usamos flexbox para alinear el texto y la línea */
+    align-items: center; /* Centra verticalmente el texto y la línea */
 }
 
 h1::after {
     content: '';
-    position: absolute;
-    top: 60%; 
-    left: 5rem;
-    right: 5rem;
+    flex-grow: 1; /* La línea ocupará todo el espacio restante */
+    margin-left: 5rem;
+    margin-right: 40px; /* Asegura que la línea termine 10px antes del borde derecho */
     height: 2px;
     background-color: white;
-    transform: translateY(-50%);
+    max-width: calc(100% - 20px); /* Limita la longitud total de la línea para evitar que llegue al borde */
 }
 
 .platos-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     flex-wrap: wrap;
     color: black;
 }
@@ -53,7 +57,7 @@ h1::after {
     background-color: #f7d154;
 }
 
-.plato:hover{
+.plato:hover {
     transform: scale(1.1);
 }
 
@@ -80,24 +84,24 @@ h1::after {
 
 .sticky-button {
     position: fixed;
-    bottom: 20px; /* Ajusta la distancia desde el fondo */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    width: 60px; /* Ajusta el tamaño del botón */
+    bottom: 20px; 
+    right: 20px; 
+    width: 60px;
     height: 60px;
-    background-color: #866C35; /* Color de fondo */
-    border-radius: 50%; /* Redondea los bordes */
+    background-color: #866C35; 
+    border-radius: 50%;
     cursor: pointer;
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    z-index: 1000; 
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .sticky-button img {
-    width: 50%; /* Ajusta el tamaño de la imagen dentro del botón */
+    width: 50%;
     height: auto;
 }
 
 .sticky-button:hover {
-    transform: scale(1.1); /* Efecto de agrandamiento al pasar el ratón */
+    transform: scale(1.1);
 }
