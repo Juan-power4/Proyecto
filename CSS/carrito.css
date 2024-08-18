@@ -1,0 +1,28 @@
+body {
+    font-family: 'Anton', sans-serif,'Questrial' ;
+    margin: 0;
+    padding: 0;
+    background-color: #D69E32;
+    background-image: url(/Imagenes/Carrito/cafesFondo.png);
+    background-size: auto;
+    background-position: center;
+    height: 50vh; /* Ocupa el 100% de la altura de la pantalla */
+}
+
+
+
+.container{
+    display: flex;
+    justify-content: flex-start; /* Centra el contenido horizontalmente */
+    align-items: center;
+    height: 100vh;
+}
+
+h1{
+    position: relative;
+    top: -250px; /* Mueve hacia arriba */
+    left: 60px; /* Mueve hacia la derecha */
+    font-size: 54px;
+    border-bottom: 2px solid black;
+    color: #3C2E26;
+}
