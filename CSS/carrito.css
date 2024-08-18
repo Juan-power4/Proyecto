@@ -2,16 +2,15 @@ body {
     font-family: 'Anton', sans-serif,'Questrial' ;
     margin: 0;
     padding: 0;
-    background-color: #D69E32;
-    background-image: url(/Imagenes/Carrito/cafesFondo.png);
-    background-size: auto;
-    background-position: center;
-    height: 50vh; /* Ocupa el 100% de la altura de la pantalla */
 }
 
 
 
 .container{
+    background-color: #D69E32;
+    background-image: url(/Imagenes/Carrito/cafesFondo.png);
+    background-size: center;
+    background-position: center;
     display: flex;
     justify-content: flex-start; /* Centra el contenido horizontalmente */
     align-items: center;
@@ -25,4 +24,85 @@ h1{
     font-size: 54px;
     border-bottom: 2px solid black;
     color: #3C2E26;
+}
+
+.cart {
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -200px; /* Alinea con el título */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Questrial', sans-serif; /* Fuente consistente */
+    color: #3C2E26; /* Mismo color que el título */
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px; /* Bordes redondeados */
+    object-fit: cover;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.quantity button {
+    background-color: #D69E32;
+    color: #3C2E26;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity button:hover {
+    background-color: #b58229; /* Color más oscuro al pasar el cursor */
+}
+
+.price {
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.summary {
+    margin-top: 30px;
+    text-align: right;
+    font-size: 18px;
+    color: #3C2E26;
+    font-family: 'Questrial', sans-serif;
+}
+
+.summary div {
+    margin-bottom: 10px;
 }
