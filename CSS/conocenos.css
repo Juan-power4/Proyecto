@@ -18,6 +18,7 @@ body {
     align-items: center;
     padding: 20px;
     background: url('/Imagenes/Conocenos/comidaFondo.jpg');
+    background-size: cover;
 }
 
 .logo {
@@ -25,39 +26,65 @@ body {
     height: auto;
 }
 
-.BotonHome {
+a.BotonHome {
     margin-top: 20px;
     background: url('/Imagenes/Conocenos/botonMadera.png') no-repeat center;
     background-size: contain;
-    border: none;
-    padding: 10px 20px;
-    color: white;
+    padding: 10% 15%;  /* Ajustar el padding para evitar desbordamiento */
+    color: #ede1b7;
     font-size: 18px;
     display: flex;
     align-items: center;
+    justify-content: center;  /* Centra el contenido dentro del enlace */
     cursor: pointer;
+    text-decoration: none;  /* Remover subrayado en el enlace */
 }
 
 .home-icono {
     margin-right: 10px;
     width: 24px;
     height: auto;
+    margin-bottom: 7px;
 }
 
 .lado-derecho {
-    flex: 1;
+    flex: 1; 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    align-items: flex-start;
+    background-color: #d0982b;
     padding: 20px;
+    color: black;
 }
 
-.persona {
-    margin: 15px;
-    text-align: center;
-    color: white;
+.Juanjo {
+    flex-direction: row; /* Texto a la derecha de la imagen */
+}
+
+.Lacu {
+    flex-direction: row-reverse; /* Texto a la izquierda de la imagen */
+}
+
+.Andres {
+    flex-direction: row; /* Texto a la derecha de la imagen */
+}
+
+.Juanjo, .Lacu, .Andres {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    margin-left: 30px;
+}
+
+.Juanjo .texto-juanjo, .Andres .texto-andres {
+    margin-left: 20px;
+}
+
+.Lacu .texto-lacu {
+    margin-right: 20px;
+    margin-left: 140px;
+    text-align: right;
 }
 
 .profile-pic {
@@ -67,21 +94,24 @@ body {
     object-fit: cover;
 }
 
-.persona h3 {
-    margin: 10px 0 5px 0;
+h3 {
+    margin: 0;
     font-size: 24px;
+    font-family: 'Anton', sans-serif;
+    color: #4a2906;
 }
 
-.persona p {
+p {
     margin: 0;
     font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.persona a {
-    color: #ADD8E6;
+a {
+    color: #000d80;
     text-decoration: none;
 }
 
-.persona a:hover {
+a:hover {
     text-decoration: underline;
 }
