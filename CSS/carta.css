@@ -46,9 +46,10 @@ h1::after {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    margin-bottom: 10px;
     gap: 50px;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 }
 
 .carousel::-webkit-scrollbar { 
