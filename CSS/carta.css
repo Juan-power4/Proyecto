@@ -1,0 +1,48 @@
+.main {
+    background-color: #D69E32;
+    font-family:  'Questrial', sans-serif;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.platos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    color: black;
+}
+
+.plato {
+    border-radius: 20px;
+    padding: 20px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f7d154;
+}
+
+.plato:hover{
+    transform: scale(1.1);
+}
+
+.plato img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.precio {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
+.nombre {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.descripcion {
+    font-size: 14px;
+}
