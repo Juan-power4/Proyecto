@@ -28,7 +28,7 @@ h1 {
     color: white; 
     position: relative;
     padding-left: 5rem; 
-    margin-top: 70px;
+    margin-top: 40px;
     margin-bottom: 30px;
     font-size: 2em;
     text-align: left;
@@ -39,8 +39,8 @@ h1 {
 h1::after {
     content: '';
     flex-grow: 1;
-    margin-left: 5rem;
-    margin-right: 40px;
+    margin-left: 4.5rem;
+    margin-right: 4.5px;
     height: 2px;
     background-color: white;
     max-width: calc(100% - 20px);
@@ -100,15 +100,20 @@ h1::after {
     transition: all 0.3s ease; 
     overflow: hidden; 
     margin-bottom: 20px;
+    height: auto;
+    flex-grow: 1;
+    align-self: flex-start;
 }
 
 .plato:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
+    flex-grow: 1.1;
+    padding-bottom: 50px;
 }
 
 .plato .add-to-cart {
     position: absolute;
-    bottom: -55px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #8B4513;
@@ -116,7 +121,7 @@ h1::after {
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
