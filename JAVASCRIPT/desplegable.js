@@ -1,43 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const stickyButton = document.querySelector(".sticky-button");
-  const cartContainer = document.createElement("div");
-  document.body.appendChild(cartContainer);
+function toggleDesplegable() {
+  const container = document.getElementById("desplegable-container");
 
-  // Función para cargar el contenido del desplegable
-  function loadDesplegable() {
+  // Verifica si el contenido ya está cargado
+  if (container.innerHTML.trim() === "") {
+    // Carga el contenido de Desplegable.html si aún no se ha cargado
     fetch("/Html/Desplegable.html")
       .then((response) => response.text())
-      .then((html) => {
-        cartContainer.innerHTML = html;
-        cartContainer.classList.add("cart-overlay");
-        const closeButton = cartContainer.querySelector(".close-btn");
-        closeButton.addEventListener("click", closeDesplegable);
-      });
-  }
-
-    function toggleDesplegable() {
-    const cartOverlay = document.querySelector(".cart-overlay");
-    cartOverlay.classList.toggle("active");
-
-    if (cartOverlay.classList.contains("active")) {
-        document.body.style.overflow = "hidden";
+      .then((data) => {
+        container.innerHTML = data;
+        container.style.display = "block";
+      })
+      .catch((error) =>
+        console.error("Error al cargar el desplegable:", error)
+      );
+  } else {
+    // Si ya está cargado, alterna la visibilidad
+    if (container.style.display === "none" || container.style.display === "") {
+      container.style.display = "block";
     } else {
-        document.body.style.overflow = "";
+      container.style.display = "none";
     }
-    }
-
-
-  // Función para cerrar el carrito
-  function closeDesplegable() {
-    cartContainer.classList.remove("active");
   }
-
-  // Abrir el carrito al hacer clic en el botón
-  stickyButton.addEventListener("click", function () {
-    if (!cartContainer.innerHTML) {
-      loadDesplegable();
-    }
-    toggleDesplegable();
-  });
-
-});
+}
