@@ -1,80 +1,78 @@
-// Array para almacenar los productos en el carrito
-let cart = [];
+document.addEventListener('DOMContentLoaded', () => {
+    const cartContainer = document.querySelector('.cart');
+    const subtotalEl = document.getElementById('subtotal');
+    const taxEl = document.getElementById('tax');
+    const totalEl = document.getElementById('total');
+    const clearCartButton = document.getElementById('clear-cart');
 
-function addToCart(nombre, precio) {
-    // Obtener el carrito actual del localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    // Agregar el nuevo producto al carrito
-    cart.push({ nombre, precio, cantidad: 1 });
+    function renderCart() {
+        cartContainer.innerHTML = ''; // Limpiar el contenedor del carrito
+        let total = 0;
 
-    // Guardar el carrito actualizado en el localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
 
-    alert(`${nombre} ha sido agregado al carrito.`);
-}
+            cartItem.innerHTML = `
+                <div class="product">
+                    <img src="${item.image}" alt="${item.name}">
+                    <p>${item.name}</p>
+                </div>
+                <div class="quantity-container">
+                    <button class="minus" data-name="${item.name}">-</button>
+                    <input type="number" value="${item.quantity}" readonly>
+                    <button class="plus" data-name="${item.name}">+</button>
+                </div>
+                <div class="price-container">
+                    <p>$${(item.price * item.quantity).toLocaleString()}</p>
+                </div>
+            `;
 
-// Carrito.js
+            cartContainer.appendChild(cartItem);
+            total += item.price * item.quantity;
+        });
 
-// Función para cargar y mostrar los productos en el carrito
-function loadCart() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let cartContainer = document.getElementById('cart-container');
+        const tax = total * 0.19;
+        const subtotal = total - tax;
 
-    if (cart.length === 0) {
-        cartContainer.innerHTML = '<p>Tu carrito está vacío.</p>';
-        return;
+        subtotalEl.textContent = `$${subtotal.toLocaleString()}`;
+        taxEl.textContent = `$${tax.toLocaleString()}`;
+        totalEl.textContent = `$${total.toLocaleString()}`;
     }
 
-    cartContainer.innerHTML = ''; // Limpiar el contenido previo
+    function updateQuantity(name, delta) {
+        cart = cart.map(item => {
+            if (item.name === name) {
+                item.quantity += delta;
+                // Si la cantidad es 0 o menor, eliminar el artículo del carrito
+                if (item.quantity <= 0) {
+                    return null;  // Marcamos para eliminar
+                }
+            }
+            return item;
+        }).filter(item => item !== null); // Filtramos los elementos marcados para eliminar
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    }
 
-    cart.forEach((item, index) => {
-        let productRow = document.createElement('div');
-        productRow.classList.add('cart-item');
-        productRow.innerHTML = `
-            <p>${item.nombre}</p>
-            <p>$${item.precio}</p>
-            <p>
-                <button onclick="updateQuantity(${index}, -1)">-</button>
-                ${item.cantidad}
-                <button onclick="updateQuantity(${index}, 1)">+</button>
-            </p>
-            <p>$${(item.precio * item.cantidad).toFixed(2)}</p>
-            <button onclick="removeFromCart(${index})">Eliminar</button>
-        `;
-        cartContainer.appendChild(productRow);
+    function clearCart() {
+        cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        renderCart();
+    }
+
+    cartContainer.addEventListener('click', (e) => {
+        if (e.target.classList.contains('minus')) {
+            updateQuantity(e.target.dataset.name, -1);
+        } else if (e.target.classList.contains('plus')) {
+            updateQuantity(e.target.dataset.name, 1);
+        }
     });
 
-    calculateTotal(); // Calcula y muestra el total del carrito
-}
+    clearCartButton.addEventListener('click', clearCart);
 
-// Función para actualizar la cantidad de un producto
-function updateQuantity(index, change) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (cart[index].cantidad + change > 0) {
-        cart[index].cantidad += change;
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    loadCart();
-}
-
-// Función para eliminar un producto del carrito
-function removeFromCart(index) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.splice(index, 1); // Eliminar el producto en el índice dado
-    localStorage.setItem('cart', JSON.stringify(cart));
-    loadCart();
-}
-
-// Función para calcular el total del carrito
-function calculateTotal() {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let total = cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0);
-    let totalElement = document.createElement('div');
-    totalElement.classList.add('cart-total');
-    totalElement.innerHTML = `<strong>Total: $${total.toFixed(2)}</strong>`;
-    document.getElementById('cart-container').appendChild(totalElement);
-}
-
-// Cargar el carrito cuando la página se carga
-document.addEventListener('DOMContentLoaded', loadCart);
+    renderCart();
+});
