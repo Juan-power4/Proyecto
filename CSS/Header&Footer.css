@@ -11,11 +11,13 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5)
 }
 
 .logo img {
-    height: 100px; /* Aumenta un poco la altura del logo */
+    height: 100px;
     width: auto;
+    margin-left: 4.5rem;
 }
 
 .nav-menu {
@@ -23,6 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 50%;
+    margin-right: 4.5rem;
 }
 
 .nav-menu button {
