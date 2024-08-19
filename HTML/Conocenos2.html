@@ -10,17 +10,29 @@
     <script src="/JAVASCRIPT/Conocenos2.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <a href="Home.html" class="logo">
-            <img src="/Imagenes/Home/LaPintaLogo.png" alt="La Pinta Logo">
-        </a>
-        <nav class="nav-menu">
-            <button onclick="location.href='Home.html'">Home</button>
-            <button onclick="location.href='Carta.html'">Carta</button>
-            <button onclick="location.href='Conocenos.html'">Conócenos</button>
-        </nav>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">
+                <img src="/Imagenes/Index/Menu_Hamburgesa.png" alt="Menu">
+            </button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="carta.html">Carta</a>
+                <a href="carrito.html">Carrito de Compras</a>
+            </div>
+        </div>
+        
+        <h1><a href="index.html">La Pinta</a></h1>
+        <div>
+            <a href="/Html/Carrito.html">
+                <img src="/Imagenes/Index/carritoIcono.png" alt="Carrito">
+            </a>
+        </div>
     </header>
 
     <main class="main">
@@ -76,16 +88,16 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-left">
-                <a href="Home.html" class="logo">
+                <a href="index.html" class="logo">
                     <img src="/Imagenes/Home/LaPintaLogo.png" alt="La Pinta Logo">
                 </a>
                 <div class="footer-address">
                     <p><strong>Dirección:</strong> Cra 69 #25B – 44 Of. 609,<br>Edificio World Business Port</p>
-                    <p><strong>Teléfono:</strong> 601 7034250</p>
+        <p><strong>Teléfono:</strong> 601 7034250</p>
                 </div>
             </div>
             <div class="footer-right">
-                <h2><a href="Conocenos.html">Conócenos</a></h2> 
+                <h2><a href="Conocenos2.html">Conócenos</a></h2> 
                 <div class="footer-social">
                     <img src="/Imagenes/Home/RedesSociales.png" alt="Redes Sociales">
                 </div>

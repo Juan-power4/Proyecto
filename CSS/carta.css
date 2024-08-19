@@ -71,7 +71,7 @@ h1::after {
 .carousel-button {
     border: none;
     background: none;
-    color: #8B4513;
+    color: #3C2E26;
     font-size: 2rem;
     cursor: pointer;
     padding: 0;
@@ -116,7 +116,7 @@ h1::after {
     bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #8B4513;
+    background-color: #3C2E26;
     color: white;
     border: none;
     border-radius: 20px;
@@ -172,7 +172,7 @@ h1::after {
     bottom: 10px;
     width: 60px;
     height: 60px;
-    background-color: #866C35;
+    background-color: #3C2E26;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1000;

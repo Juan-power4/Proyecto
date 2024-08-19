@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
 }
 
-h1 {
+.container h1 {
     margin-bottom: 20px; /* Separa el título del carrito */
     font-size: 54px;
     border-bottom: 2px solid black;

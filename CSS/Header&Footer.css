@@ -5,65 +5,92 @@ body {
     background-color: #fff;
 }
 
-.header {
-    background-color: #8B4513;
+/* Estilos del Header */
+header {
+    background-color: #3C2E26; /* Color de fondo */
+    padding: 20px 40px; /* Espaciado interno */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5)
+    justify-content: space-between; /* Distribuye los elementos en los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
-.logo img {
-    height: 70px; /* Aumenta un poco la altura del logo */
-    width: auto;
-    margin-left: 4.5rem;
+header h1 {
+    font-family: 'Great Vibes'; /* Estilo de la fuente */
+    color: #FFF8E7; /* Color de la letra */
+    margin: 0; /* Sin márgenes */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de agrandamiento */
 }
 
-.nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 50%;
-    margin-right: 4.5rem;
+header h1 a {
+    color: inherit; /* Hereda el color de h1 */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que el transform funcione correctamente */
 }
 
-.nav-menu button {
-    background-color: transparent;
-    border: none;
-    color: #EDE1B7;
-    font-family: 'Questrial', sans-serif;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px 20px;
+header h1 a:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño del texto */
+}
+
+
+
+
+header a {
+    text-decoration: none; /* Quita subrayado de los enlaces */
+}
+
+header img {
+    height: 30px; /* Tamaño de las imágenes */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave */
+}
+
+header img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
+    opacity: 0.8; /* Disminuye la opacidad */
+}
+
+/* Estilos del Dropdown Menu */
+.dropdown {
     position: relative;
+    display: inline-block;
 }
 
-.nav-menu button:hover {
-    color: #D69E32;
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.nav-menu button::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #EDE1B7;
-    transition: width 0.3s;
+.dropdown-content {
+    display: none;
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    background-color: #3C2E26;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
 }
 
-.nav-menu button.active::after,
-.nav-menu button:hover::after {
-    width: 100%;
+.dropdown-content a {
+    color: #FFF8E7;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Questrial', sans-serif;
 }
+
+.dropdown-content a:hover {
+    background-color: #534741;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 /* Footer Styles */
 .footer {
-    background-color: #8B4513;
+    background-color: #3C2E26;
     color: #EDE1B7;
     padding: 10px 230px;
     display: flex;
@@ -140,3 +167,8 @@ body {
     max-width: 150px;
     height: auto;
 }
+
+.logo img {
+    height: 70px; /* Aumenta un poco la altura del logo */
+    width: auto;
+    margin-left: 4.5rem;
