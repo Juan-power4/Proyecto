@@ -37,53 +37,39 @@
 
     <main class="main">
         <h1>Conócenos</h1>
-        
-        <div class="founders-section">
-            <div class="founder-card">
-                <div class="founder-image">
-                    <img src="/Imagenes/Conocenos2/juanjoConocenos.jpg" alt="Juan José">
-                    <div class="founder-info">
-                        <h2>Juan José Cárdenas</h2>
-                        <p>Gerente de La Pinta. Con experiencia en administración de empresas, se encarga de que todo funcione a la perfección.</p>
-                    </div>
+        <div class="seccion-nosotros">
+            <div class="marco-nosotros" onmouseover="showInfo('juanjo')" onmouseleave="resetInfo()">
+                <div class="imagen-nosotros">
+                    <img src="/Imagenes/Conocenos2/juanjoConocenos.jpg" alt="Juanjo">
                 </div>
             </div>
     
-            <div class="founder-card">
-                <div class="founder-image">
-                    <img src="/Imagenes/Conocenos2/lacuConocenos.jpg" alt="Juan Andrés">
-                    <div class="founder-info">
-                        <h2>Juan Andrés Lacouture</h2>
-                        <p>Accionista principal. Empresario exitoso que convirtió su pasión por la comida en un proyecto con impacto cultural.</p>
-                    </div>
+            <div class="marco-nosotros" onmouseover="showInfo('lacu')" onmouseleave="resetInfo()">
+                <div class="imagen-nosotros">
+                    <img src="/Imagenes/Conocenos2/lacuConocenos.jpg" alt="Lacu">
                 </div>
             </div>
     
-            <div class="founder-card">
-                <div class="founder-image">
-                    <img src="/Imagenes/Conocenos2/andresConocenos.jpg" alt="Andrés">
-                    <div class="founder-info">
-                        <h2>Andrés Felipe Sánchez</h2>
-                        <p>Chef ejecutivo. Dedicó diez años a estudiar la gastronomía colombiana para ofrecer los sabores más auténticos.</p>
-                    </div>
+            <div class="marco-nosotros" onmouseover="showInfo('andres')" onmouseleave="resetInfo()">
+                <div class="imagen-nosotros">
+                    <img src="/Imagenes/Conocenos2/andresConocenos.jpg" alt="Andres">
                 </div>
             </div>
         </div>
     
-        <div class="history-section">
-            <div class="history-logo">
+        <div class="seccion-historia">
+            <div class="logo-historia" id="info-logo">
                 <img src="/Imagenes/Home/LaPintaLogo.png" alt="La Pinta Logo">
             </div>
-            <div class="history-text">
-                <h2>Historia de La Pinta</h2>
-                <h3>Desde 2015</h3>
-                <p>
+            <div class="texto-historia">
+                <h2 id="info-title">Historia de La Pinta</h2>
+                <h3 id="info-subtitle">Desde 2015</h3>
+                <p id="info-description">
                     Andrés, Juan Andrés, y Juan José se conocieron en la universidad, y a pesar de sus diferentes trayectorias, mantuvieron una sólida amistad basada en su amor por Colombia. Andrés, apasionado por la cocina, dedicó diez años a estudiar la gastronomía colombiana, mientras que Juan Andrés se convirtió en un exitoso empresario con una gran fortuna, y Juan José desarrolló su carrera en la administración de empresas. En 2015, decidieron fusionar sus talentos y fundaron La Pinta Colombiana, un restaurante que fusiona la autenticidad de la comida tradicional colombiana con una experiencia de alta calidad. Hoy en día, La Pinta no solo es un referente en la gastronomía colombiana, sino también un lugar popular para disfrutar de fiestas y eventos.
                 </p>
             </div>
         </div>
-    </main>
-    
+    </main>    
     
     <footer class="footer">
         <div class="footer-content">
