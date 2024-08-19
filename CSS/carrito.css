@@ -181,6 +181,13 @@ body {
     font-family: 'Questrial', sans-serif;
 }
 
+.button-container {
+    display: flex;
+    justify-content: flex-start; 
+    margin-bottom: 20px;
+    margin-right: 1000px;
+}
+
 .clear-cart {
     font-family: 'Anton', sans-serif;
     background-color: #3C2E26;
@@ -203,7 +210,9 @@ body {
 }
 
 .summary {
-    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     text-align: right;
     font-size: 28px;
     color: #3C2E26;
