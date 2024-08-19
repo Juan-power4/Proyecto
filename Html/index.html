@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/CSS/styles.css">
     <link rel="stylesheet" href="/CSS/Header&Footer.css">
 </head>
@@ -30,54 +31,83 @@
             </a>
         </div>
     </header>
-
-    <section class="carousel">
-        <div class="carousel-item">
-            <img src="/Imagenes/Index/bandeja_grande.png" alt="Bandeja Paisa">
-            <div class="carousel-caption">
-                <h2>Plato de la Temporada</h2>
-                <h3>Bandeja Paisa</h3>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="/Imagenes/Index/Ceviche_grande.png" alt="Ceviche de Camarón">
-            <div class="carousel-caption">
-                <h2>Entrada de la Temporada</h2>
-                <h3>Ceviche de Camarón</h3>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="/Imagenes/Index/Guaro_grande.png" alt="Aguardiente Rosado del Tolima">
-            <div class="carousel-caption">
-                <h2>¡Disfruta y Prueba!</h2>
-                <h3>Aguardiente Rosado del Tolima</h3>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="/Imagenes/Index/Merengon_grande.png" alt="Merengón de Guanábana">
-            <div class="carousel-caption">
-                <h2>Endulza tu paladar</h2>
-                <h3>Merengón de Guanábana</h3>
-            </div>
-        </div>
-        <div class="carousel-item">
-            <img src="/Imagenes/Index/" alt="Conoce La Pinta">
-            <div class="carousel-caption">
-                <h2>¿Quiénes somos?</h2>
-                <h3>¡Conoce La Pinta!</h3>
-            </div>
-        </div>
-    </section>
-
+     <div class="slider-box">
+        <ul>
+            <li>
+                <img src="/Imagenes/Index/bandeja_grande.png" alt="Bandeja Paisa">
+                <div class="texteo">
+                    <h3>Plato de la Temporada</h3>
+                    <h1> <a href="Carta.html">Bandeja Paisa</a></h1>
+                    <p>Frijoles, arroz, carne molida, chicharrón, <br> chorizo, huevo, y plátano maduro.</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Imagenes/Index/Ceviche_grande.png" alt="Ceviche de Camarón">
+                <div class="texteo">
+                    <h3>Entrada de la Temporada</h3>
+                    <h1><a href="Carta.html">Ceviche de <br>Camarón</a></h1>
+                    <p>Fresco ceviche de camarón en salsa de <br>tomate con limón y cilantro.</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Imagenes/Index/Guaro_grande.png" alt="Aguardiente Rosado del Tolima">
+                <div class="texteo">
+                    <h3>¡Disfruta y Prueba!</h3>
+                    <h1><a href="Carta.html">Aguardiente <br> Rosado del <br>Tolima</a></h1>
+                    <p>Aguardiente rosado del Tolima, suave <br> y refrescante. 750ml</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Imagenes/Index/Merengon_grande.png" alt="Merengón de Guanábana">
+                <div class="texteo">
+                    <h3>Endulza tu paladar</h3>
+                    <h1><a href="Carta.html">Merengón <br>de Guanábana</a></h1>
+                    <p>Merengón de guanábana, crujiente <br> por fuera y suave por dentro.</p>
+                </div>
+            </li>
+            <li>
+                <img src="/Imagenes/Index/chefs_grandre.png" alt="Conoce La Pinta">
+                <div class="texteo">
+                    <h3>¿Quiénes somos?</h3>
+                    <h1><a href="Conocenos2.html">¡Conoce La <br> Pinta!</a></h1>
+                    <p> Conoce como nacio La Pinta</p>
+                </div>
+            </li>
+        </ul>
+    </div>
     <section class="tradition">
-        <h2>"Tradición en cada plato, alegría en cada sorbo"</h2>
+        <h2>"Tradición en cada plato, <br>alegría en cada sorbo"</h2>
         <div class="tradition-gallery">
+            <div class="tradition-item">
             <img src="/Imagenes/Index/Ajiaco_mediano.png" alt="Sopa">
-            <img src="/Imagenes/Index/cuajada_mediana.png" alt="Cuajada">
-            <img src="/Imagenes/Index/cartagena_medaiana.png" alt="Carne">
-            <img src="/Imagenes/Index/Platano_mediana.png" alt="Platano">
+            <div class="overlay">
+                <h3><a href="Carta.html">Ajiaco</a></h3>
+                <p>Ajiaco típico Bogotano con pollo,<br> diferentes papas, arroz, aguacate <br>y alcaparras.</p>
+            </div>
         </div>
-    </section>
+        <div class="tradition-item">
+            <img src="/Imagenes/Index/cuajada_mediana.png" alt="Cuajada">
+            <div class="overlay">
+                <h3><a href="Carta.html">Cuajada con Melado</a></h3>
+                <p>Postre tradicional con cuajada y melado de panela.</p>
+            </div>
+        </div>
+        <div class="tradition-item">
+            <img src="/Imagenes/Index/cartagena_medaiana.png" alt="Carne">
+            <div class="overlay">
+                <h3><a href="Carta.html">Posta Cartagenera</a></h3>
+                <p>Carne de res en salsa negra a base de panela, <br> típica de Cartagena. Acompañada de arroz de coco <br> y tajadas de platano maduro.</p>
+            </div>
+        </div>
+        <div class="tradition-item">
+            <img src="/Imagenes/Index/Platano_mediana.png" alt="Platano">
+            <div class="overlay">
+                <h3><a href="Carta.html">Plátano con Bocadillo y Queso</a></h3>
+                <p>Plátano maduro con bocadillo <br>y queso fresco.</p>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
@@ -87,7 +117,7 @@
                 </a>
                 <div class="footer-address">
                     <p><strong>Dirección:</strong> Cra 69 #25B – 44 Of. 609,<br>Edificio World Business Port</p>
-        <p><strong>Teléfono:</strong> 601 7034250</p>
+                    <p><strong>Teléfono:</strong> 601 7034250</p>
                 </div>
             </div>
             <div class="footer-right">
