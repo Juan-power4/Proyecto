@@ -2,6 +2,19 @@ body {
     background-color: #D69E32;
     overflow-x: hidden; 
     font-family: 'Questrial', sans-serif;
+    position: relative;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Asegura que el body ocupe toda la altura de la ventana */
+    width: 100%;
+}
+
+header, footer, .content {
+    position: relative;
+    z-index: 10; /* Asegura que estén por encima del contenido general */
 }
 
 .main {
@@ -15,7 +28,7 @@ h1 {
     color: white; 
     position: relative;
     padding-left: 5rem; 
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 30px;
     font-size: 2em;
     text-align: left;
@@ -26,8 +39,8 @@ h1 {
 h1::after {
     content: '';
     flex-grow: 1;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    margin-left: 5rem;
+    margin-right: 40px;
     height: 2px;
     background-color: white;
     max-width: calc(100% - 20px);
@@ -45,6 +58,7 @@ h1::after {
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
+    margin-bottom: 10px;
     gap: 50px;
     scrollbar-width: none;
     -ms-overflow-style: none; 
@@ -86,20 +100,15 @@ h1::after {
     transition: all 0.3s ease; 
     overflow: hidden; 
     margin-bottom: 20px;
-    height: auto;
-    flex-grow: 1;
-    align-self: flex-start;
 }
 
 .plato:hover {
-    transform: scale(0.95);
-    flex-grow: 1.1;
-    padding-bottom: 50px;
+    transform: scale(0.9);
 }
 
 .plato .add-to-cart {
     position: absolute;
-    bottom: -50px;
+    bottom: -55px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #8B4513;
@@ -107,7 +116,7 @@ h1::after {
     border: none;
     border-radius: 20px;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -150,6 +159,9 @@ h1::after {
 }
 
 .sticky-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     position: sticky;
     right: 15px;
     bottom: 10px;
@@ -158,6 +170,7 @@ h1::after {
     background-color: #866C35;
     border-radius: 50%;
     cursor: pointer;
+    z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -172,3 +185,68 @@ h1::after {
 .sticky-button:hover {
     transform: scale(1.1);
 }
+#slider-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px; /* Ancho fijo del slider */
+    height: 100%; /* Altura completa de la ventana */
+    background-color: white;
+    z-index: 10000;
+    box-shadow: -2px 0 5px rgba(34, 32, 12, 0.5);
+    overflow-y: auto; /* Scroll si el contenido es muy grande */
+    display: none; /* Oculto por defecto */
+}
+
+#slider-container.active {
+    display: block; /* Se muestra al activarse */
+}
+
+#slider-content {
+    width: 100%;
+    height: 100%;
+    background-color: #8B4513; /* Fondo marrón oscuro */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#desplegable-iframe {
+    width: 100%;
+    height: calc(100% - 40px); /* Ajuste de altura restando el espacio para el botón de cerrar */
+    border: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Mueve el botón a la esquina superior izquierda */
+    background-color: transparent;
+    color: #E5DEC2; /* Color claro para contrastar con el fondo oscuro */
+    border: none;
+    font-size: 24px; /* Tamaño de la "X" */
+    cursor: pointer;
+    z-index: 10001; /* Asegura que el botón esté por encima de todo */
+}
+
+.close-btn:hover {
+    color: #f6c66c; /* Cambia el color en hover para mejorar la accesibilidad */
+}
+
+.overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+}
+

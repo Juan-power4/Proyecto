@@ -14,7 +14,7 @@ body {
     color: #E5DEC2;
     padding: 20px;
     border-radius: 10px 0 0 10px;
-    width: 30%; /* Cambiado a 30% del ancho de la pantalla */
+    width: 100%; /* Cambiado a 30% del ancho de la pantalla */
     max-width: 500px; /* Opcional: ajusta el máximo si es necesario */
     height: 100vh; /* Asegura que ocupe el 100% de la pantalla */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -195,7 +195,7 @@ body {
 .checkout-btn {
     width: 100%;
     padding: 15px;
-    background-color: #f6c66c;
+    background-color: #ffb62d;
     color: #E5DEC2;
     border: none;
     border-radius: 10px;
@@ -207,5 +207,5 @@ body {
 }
 
 .checkout-btn:hover {
-    background-color: #ffe5b4; 
+    background-color: #a36f0f; 
 }

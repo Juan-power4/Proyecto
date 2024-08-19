@@ -1,24 +1,18 @@
 function toggleDesplegable() {
-  const container = document.getElementById("desplegable-container");
+  const sliderContainer = document.getElementById("slider-container");
+  const overlay = document.getElementById("overlay");
 
-  // Verifica si el contenido ya está cargado
-  if (container.innerHTML.trim() === "") {
-    // Carga el contenido de Desplegable.html si aún no se ha cargado
-    fetch("/Html/Desplegable.html")
-      .then((response) => response.text())
-      .then((data) => {
-        container.innerHTML = data;
-        container.style.display = "block";
-      })
-      .catch((error) =>
-        console.error("Error al cargar el desplegable:", error)
-      );
+  // Verifica el estado actual de display del slider y del overlay
+  if (sliderContainer.style.display === "block") {
+    sliderContainer.style.display = "none";
+    overlay.style.display = "none";
+    document.body.style.overflow = ""; // Permitir scroll nuevamente
   } else {
-    // Si ya está cargado, alterna la visibilidad
-    if (container.style.display === "none" || container.style.display === "") {
-      container.style.display = "block";
-    } else {
-      container.style.display = "none";
-    }
+    sliderContainer.style.display = "block";
+    overlay.style.display = "block";
+    document.body.style.overflow = "hidden"; // Prevenir scroll en el fondo
   }
+}
+function finalizarCompra() {
+  window.open("/Html/Carrito.html", "_blank");
 }

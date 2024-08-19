@@ -23,6 +23,8 @@
         </nav>
     </header>
 
+    
+
     <main class="main">
         <div class="Entradas">
             <h1>Entradas</h1>
@@ -366,6 +368,15 @@
         <div class="sticky-button" onclick="toggleDesplegable()">
             <img src="/Imagenes/Home/carritoIcono.png" alt="Carrito de Compras">
         </div>  
+
+        <div id="overlay" class="overlay" onclick="toggleDesplegable()"></div>
+
+<div id="slider-container">
+    <div id="slider-content">
+        <button class="close-btn" onclick="toggleDesplegable()">&times;</button>
+        <iframe src="/Html/Desplegable.html" id="desplegable-iframe" frameborder="0"></iframe>
+    </div>
+</div>
     </main>
 
     <footer class="footer">
@@ -387,5 +398,7 @@
             </div>
         </div>
     </footer>
+    
+    <script src="/JAVASCRIPT/desplegable.js"></script>
 </body>
 </html>
