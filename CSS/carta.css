@@ -52,7 +52,7 @@ h1::after {
 }
 
 .carousel::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+    display: none;
 }
 
 .carousel-button {
@@ -93,13 +93,6 @@ h1::after {
     transform: scale(0.9);
 }
 
-.plato img {
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-}
-
 .plato .add-to-cart {
     position: absolute;
     bottom: -55px;
@@ -129,6 +122,13 @@ h1::after {
     bottom: 20px; /* Mueve el botón hacia arriba para que sea visible */
 }
 
+.plato img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
 .precio {
     font-size: 25px;
     margin: 10px 0;
@@ -142,7 +142,7 @@ h1::after {
 
 .descripcion {
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 1rem;
 }
 
 .sticky-button {

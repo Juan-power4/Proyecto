@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Pinta</title>
+    <title>La Pinta - Menú</title>
+    <link rel="icon" href="/Imagenes/Home/LaPintaLogo.png" type="la-pinta-logo">
     <link rel="stylesheet" href="/CSS/Header&Footer.css">
     <link rel="stylesheet" href="/CSS/Carta.css">
+    <script src="/JAVASCRIPT/Carta.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
@@ -25,13 +27,9 @@
         <img src="/Imagenes/Home/carritoIcono.png" alt="Carrito de Compras">
     </div>
 
-    <!-- Contenedor donde se cargará el contenido del desplegable -->
-    <div id="desplegable-container"></div>
-
     <main class="main">
         <div class="Entradas">
             <h1>Entradas</h1>
-<<<<<<< Updated upstream
             <div class="carousel-container">
                 <button class="carousel-button left" onclick="scrollCarousel('entradas-carousel', -300)">&#9664;</button>
                 <div class="carousel" id="entradas-carousel">
@@ -95,50 +93,6 @@
                             Añadir al carrito
                         </button>
                     </div>
-=======
-            <div class="platos-container">
-                <div class="plato">
-                    <img src="/Imagenes/Menu/arepa-de-chocolo-entrada.png" alt="Arepa de Choclo">
-                    <p class="precio">$19,900</p>
-                    <p class="nombre"><strong>Arepa de Choclo</strong></p>
-                    <p class="descripcion">Deliciosa arepa de choclo asada con queso derretido.</p>
-                    <button onclick="addToCart('Arepa de Choclo', 19.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/ceviche-camaron-entrada.png" alt="Ceviche de Camarón">
-                    <p class="precio">$34,900</p>
-                    <p class="nombre"><strong>Ceviche de Camarón</strong></p>
-                    <p class="descripcion">Fresco ceviche de camarón con limón y cilantro.</p>
-                    <button onclick="addToCart('Ceviche de Camarón', 34.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/patacon-hogao-entrada.png" alt="Patacón con Hogao">
-                    <p class="precio">$19,900</p>
-                    <p class="nombre"><strong>Patacón con Hogao</strong></p>
-                    <p class="descripcion">Patacones crujientes con hogao tradicional.</p>
-                    <button onclick="addToCart('Patacón con Hogao', 19.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/platano-bocadillo-queso-entrada.png" alt="Plátano con Bocadillo y Queso">
-                    <p class="precio">$29,900</p>
-                    <p class="nombre"><strong>Plátano con Bocadillo y Queso</strong></p>
-                    <p class="descripcion">Plátano maduro con bocadillo y queso fresco.</p>
-                    <button onclick="addToCart('Plátano con Bocadillo y Queso', 29.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/empanadas-vallunas-entrada.png" alt="Empanadas Vallunas">
-                    <p class="precio">$19,900</p>
-                    <p class="nombre"><strong>Empanadas Vallunas</strong></p>
-                    <p class="descripcion">Empanadas tradicionales vallunas rellenas de carne.</p>
-                    <button onclick="addToCart('Empanadas Vallunas', 19.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/chicharron-entrada.png" alt="Chicharron">
-                    <p class="precio">$29,900</p>
-                    <p class="nombre"><strong>Chicharron</strong></p>
-                    <p class="descripcion">Porción de chicharron cortado.</p>
-                    <button onclick="addToCart('Chicharron', 29.900)">Agregar al Carrito</button>
->>>>>>> Stashed changes
                 </div>
                 <button class="carousel-button right" onclick="scrollCarousel('entradas-carousel', 300)">&#9654;</button>
             </div>
@@ -146,7 +100,6 @@
         
         <div class="Platos-Fuertes">
             <h1>Platos Fuertes</h1>
-<<<<<<< Updated upstream
             <div class="carousel-container">
                 <button class="carousel-button left" onclick="scrollCarousel('platos-fuertes-carousel', -300)">&#9664;</button>
                 <div class="carousel" id="platos-fuertes-carousel">
@@ -250,78 +203,6 @@
                             Añadir al carrito
                         </button>
                     </div>
-=======
-            <div class="platos-container">
-                <div class="plato">
-                    <img src="/Imagenes/Menu/ajiaco-plato.png" alt="Ajiaco">
-                    <p class="precio">$39.900</p>
-                    <p class="nombre">Ajiaco</p>
-                    <p class="descripcion">Ajiaco santafereño con pollo, papas, y alcaparras.</p>
-                    <button onclick="addToCart('Ajiaco', 39.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/bandeja-paisa-plato.png" alt="Bandeja Paisa">
-                    <p class="precio">$54.900</p>
-                    <p class="nombre">Bandeja Paisa</p>
-                    <p class="descripcion">Frijoles, arroz, carne molida, chicharrón, chorizo, huevo, y plátano maduro.</p>
-                    <button onclick="addToCart('Bandeja Paisa', 54.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/cazuela-mariscos-plato.png" alt="Cazuela de Mariscos">
-                    <p class="precio">$54.900</p>
-                    <p class="nombre">Cazuela de Mariscos</p>
-                    <p class="descripcion">Cazuela cremosa con una mezcla de mariscos frescos.</p>
-                    <button onclick="addToCart('Cazuela de Mariscos', 54.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/chuleta-valluna-plato.png" alt="Chuleta Valluna">
-                    <p class="precio">$41.900</p>
-                    <p class="nombre">Chuleta Valluna</p>
-                    <p class="descripcion">Chuleta de cerdo apanada acompañada de chips de platano.</p>
-                    <button onclick="addToCart('Chuleta Valluna', 41.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/fritanga-plato.png" alt="Fritanga">
-                    <p class="precio">$79.900</p>
-                    <p class="nombre">Fritanga</p>
-                    <p class="descripcion">Picada para 2 personas. Variedad de carnes y embutidos fritos, acompañados de papa criolla.</p>
-                    <button onclick="addToCart('Fritanga', 79.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/lechona-tolimense-plato.png" alt="Lechona Tolimense">
-                    <p class="precio">$39.900</p>
-                    <p class="nombre">Lechona Tolimense</p>
-                    <p class="descripcion">Lechon del Tolima con arvejas y especias.</p>
-                    <button onclick="addToCart('Lechona Tolimense', 39.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/pargo-frito-plato.png" alt="Pargo Frito">
-                    <p class="precio">$59.900</p>
-                    <p class="nombre">Pargo Frito</p>
-                    <p class="descripcion">Pargo rojo frito, servido con patacones y ensalada.</p>
-                    <button onclick="addToCart('Pargo Frito', 59.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/posta-cartagenera-plato.png" alt="Posta Cartagenera">
-                    <p class="precio">$59.900</p>
-                    <p class="nombre">Posta Cartagenera</p>
-                    <p class="descripcion">Carne de res en salsa negra, típica de Cartagena.</p>
-                    <button onclick="addToCart('Posta Cartagenera', 59.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/sancocho-gallina-plato.png" alt="Sancocho de Gallina">
-                    <p class="precio">$39.900</p>
-                    <p class="nombre">Sancocho de Gallina</p>
-                    <p class="descripcion">Sopa tradicional con gallina, yuca, plátano y maíz.</p>
-                    <button onclick="addToCart('Sancocho de Gallina', 39.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/trucha-plato.png" alt="Trucha">
-                    <p class="precio">$49.900</p>
-                    <p class="nombre">Trucha al Ajillo</p>
-                    <p class="descripcion">Trucha a la plancha en una salsa de ajo asado, acompañada de papas a la francesa.</p>
-                    <button onclick="addToCart('Trucha al Ajillo', 49.900)">Agregar al Carrito</button>
->>>>>>> Stashed changes
                 </div>
                 <button class="carousel-button right" onclick="scrollCarousel('platos-fuertes-carousel', 300)">&#9654;</button>
             </div>
@@ -329,7 +210,6 @@
     
         <div class="Bebidas">
             <h1>Bebidas</h1>
-<<<<<<< Updated upstream
             <div class="carousel-container">
                 <button class="carousel-button left" onclick="scrollCarousel('bebidas-carousel', -300)">&#9664;</button>
                 <div class="carousel" id="bebidas-carousel">
@@ -423,71 +303,6 @@
                             Añadir al carrito
                         </button>
                     </div>
-=======
-            <div class="platos-container">
-                <div class="plato">
-                    <img src="/Imagenes/Menu/agua_bebidas.png" alt="Agua">
-                    <p class="precio">$6.900</p>
-                    <p class="nombre">Agua</p>
-                    <p class="descripcion">Agua mineral, con o sin gas.</p>
-                    <button onclick="addToCart('Agua', 6.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/agua-panela-bebidas.png" alt="Agua de Panela">
-                    <p class="precio">$8.900</p>
-                    <p class="nombre">Agua de Panela</p>
-                    <p class="descripcion">Refrescante agua de panela con limón.</p>
-                    <button onclick="addToCart('Agua de Panela', 8.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/aguardiente_azul_bebidas.png" alt="Aguardiente Azul">
-                    <p class="precio">$74.900</p>
-                    <p class="nombre">Aguardiente Azul</p>
-                    <p class="descripcion">Aguardiente anisado azul de la región. 500ml</p>
-                    <button onclick="addToCart('Aguardiente Azul', 74.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/aguardiente_rosado_bebidas.png" alt="Aguardiente Rosado">
-                    <p class="precio">$89.900</p>
-                    <p class="nombre">Aguardiente Rosado</p>
-                    <p class="descripcion">Aguardiente rosado del Tolima, suave y refrescante. 750ml</p>
-                    <button onclick="addToCart('Aguardiente Rosado', 89.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/cafe-bebidas.png" alt="Café">
-                    <p class="precio">$8.900</p>
-                    <p class="nombre">Café</p>
-                    <p class="descripcion">Café colombiano, oscuro y aromático.</p>
-                    <button onclick="addToCart('Taza de Café', 8.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/cerveza-bebida.png" alt="Cerveza">
-                    <p class="precio">$8.900</p>
-                    <p class="nombre">Cervezas Nacionales</p>
-                    <p class="descripcion">Variedad de cervezas nacionales. 375ml</p>
-                    <button onclick="addToCart('Cerveza', 8.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/jugos_bebidas.png" alt="Jugos Naturales">
-                    <p class="precio">$10.900</p>
-                    <p class="nombre">Jugos Naturales</p>
-                    <p class="descripcion">Jugos de frutas frescas, con azucar al gusto.</p>
-                    <button onclick="addToCart('Jugos Naturales', 10.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/limonada-bebidas.png" alt="Limonadas">
-                    <p class="precio">$9.900</p>
-                    <p class="nombre">Limonada Natural</p>
-                    <p class="descripcion">Limonada natural, con azucar al gusto.</p>
-                    <button onclick="addToCart('Limonada Natural', 9.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/limonada-panela-bebidas.png" alt="Limonada de Panela">
-                    <p class="precio">$9.900</p>
-                    <p class="nombre">Limonada de Panela</p>
-                    <p class="descripcion">Refrescante limonada con panela.</p>
-                    <button onclick="addToCart('Limonada de Panela', 9.900)">Agregar al Carrito</button>
->>>>>>> Stashed changes
                 </div>
                 <button class="carousel-button right" onclick="scrollCarousel('bebidas-carousel', 300)">&#9654;</button>
             </div>
@@ -495,7 +310,6 @@
 
         <div class="Postres">
             <h1>Postres</h1>
-<<<<<<< Updated upstream
             <div class="carousel-container">
                 <button class="carousel-button left" onclick="scrollCarousel('postres-carousel', -300)">&#9664;</button>
                 <div class="carousel" id="postres-carousel">
@@ -549,43 +363,6 @@
                             Añadir al carrito
                         </button>
                     </div>
-=======
-            <div class="platos-container">
-                <div class="plato">
-                    <img src="/Imagenes/Menu/brownie-helado-postre.png" alt="Brownie con Helado">
-                    <p class="precio">$19.900</p>
-                    <p class="nombre">Brownie con Helado</p>
-                    <p class="descripcion">Delicioso brownie de chocolate acompañado de helado de vainilla.</p>
-                    <button onclick="addToCart('Brownie con Helado', 19.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/cuajada-melao-postre.png" alt="Cuajada con Melado">
-                    <p class="precio">$14.900</p>
-                    <p class="nombre">Cuajada con Melado</p>
-                    <p class="descripcion">Postre tradicional con cuajada y melado de panela.</p>
-                    <button onclick="addToCart('Cuajada con Melado', 14.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/fresas-crema-postre.png" alt="Fresas con Crema">
-                    <p class="precio">$17.900</p>
-                    <p class="nombre">Fresas con Crema</p>
-                    <p class="descripcion">Fresas frescas con crema batida.</p>
-                    <button onclick="addToCart('Fresas con Crema', 17.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/merengon-guanabana-postre.png" alt="Merengón de Guanábana">
-                    <p class="precio">$16.900</p>
-                    <p class="nombre">Merengón de Guanábana</p>
-                    <p class="descripcion">Merengón de guanábana, crujiente por fuera y suave por dentro.</p>
-                    <button onclick="addToCart('Merengón de Guanábana', 16.900)">Agregar al Carrito</button>
-                </div>
-                <div class="plato">
-                    <img src="/Imagenes/Menu/oblea-postre.png" alt="Oblea">
-                    <p class="precio">$14.900</p>
-                    <p class="nombre">Oblea</p>
-                    <p class="descripcion">Oblea con arequipe, queso y coco rallado.</p>
-                    <button onclick="addToCart('Oblea', 14.900)">Agregar al Carrito</button>
->>>>>>> Stashed changes
                 </div>
                 <button class="carousel-button right" onclick="scrollCarousel('postres-carousel', 300)">&#9654;</button>
             </div>
@@ -611,7 +388,5 @@
             </div>
         </div>
     </footer>
-    <script src="/JAVASCRIPT/Desplegable.js" defer></script>
 </body>
-<script src="Carrito.js"></script>
 </html>

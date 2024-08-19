@@ -10,7 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 40px;
+    padding: 0 40px;
 }
 
 .logo img {
@@ -62,7 +62,7 @@ body {
 .footer {
     background-color: #8B4513;
     color: #EDE1B7;
-    padding: 20px 230px;
+    padding: 10px 230px;
     display: flex;
     justify-content: space-between;
     align-items: center;
