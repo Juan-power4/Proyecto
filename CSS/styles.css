@@ -1,0 +1,21 @@
+header {
+    background-color: #3C2E26; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+header h1 {
+    font-family: 'Great Vibes', cursive; /* Estilo de la fuente */
+    color: #FFF8E7; /* Color de la letra */
+    margin: 0; /* Sin márgenes */
+}
+
+header a {
+    text-decoration: none; /* Quita subrayado de los enlaces */
+}
+
+header img {
+    height: 30px; /* Tamaño de las imágenes */
+}
