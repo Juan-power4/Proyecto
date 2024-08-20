@@ -194,8 +194,8 @@ body {
     font-family: Questrial, sans-serif;
     font-size: 3.5rem;
     color: #3C2E26;
-    padding: 20px;
-    
+    margin: auto;
+    padding: 60px 0 40px 0;
 }
 
 .tradition h3 a {
