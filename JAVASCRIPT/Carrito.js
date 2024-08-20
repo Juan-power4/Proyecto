@@ -4,9 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const taxEl = document.getElementById('tax');
     const totalEl = document.getElementById('total');
     const clearCartButton = document.getElementById('clear-cart');
+    const buyNowButton = document.getElementById('buy-now');
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    // Función para renderizar el carrito
     function renderCart() {
         cartContainer.innerHTML = ''; // Limpiar el contenedor del carrito
         let total = 0;
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalEl.textContent = `$${total.toLocaleString()}`;
     }
 
+    // Función para actualizar la cantidad de un producto
     function updateQuantity(name, delta) {
         cart = cart.map(item => {
             if (item.name === name) {
@@ -58,12 +61,37 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCart();
     }
 
+    // Función para vaciar el carrito
     function clearCart() {
         cart = [];
         localStorage.setItem('cart', JSON.stringify(cart));
         renderCart();
     }
 
+    // Función para manejar la compra
+    function handleBuyNow() {
+        const cartItems = document.querySelectorAll(".cart-item");
+        let products = [];
+
+        cartItems.forEach(item => {
+            const productName = item.querySelector(".product p").innerText;
+            const productQuantity = item.querySelector("input[type='number']").value;
+            products.push({ name: productName, quantity: productQuantity });
+        });
+
+        const queryString = products.map(product => 
+            `product=${encodeURIComponent(product.name)}&quantity=${product.quantity}`
+        ).join("&");
+
+        const paymentWindow = window.open(`/HTML/pago.html?${queryString}`, '_blank', 'width=800,height=600');
+        if (paymentWindow) {
+            paymentWindow.focus();
+        } else {
+            alert("Permite las ventanas emergentes para continuar.");
+        }
+    }
+
+    // Event listeners
     cartContainer.addEventListener('click', (e) => {
         if (e.target.classList.contains('minus')) {
             updateQuantity(e.target.dataset.name, -1);
@@ -73,6 +101,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     clearCartButton.addEventListener('click', clearCart);
+    buyNowButton.addEventListener('click', handleBuyNow);
 
+    // Renderizar el carrito al cargar la página
     renderCart();
 });
