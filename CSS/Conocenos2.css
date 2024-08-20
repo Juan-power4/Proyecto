@@ -15,24 +15,41 @@ body {
     font-size: 2.5em;
     margin-bottom: 30px;
     color: #ede1b7;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Añade un sutil sombreado para destacar el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.main h1::after {
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background-color: #312e2d;
+    margin: 10px auto 0; 
+    position: relative;
+    top: 10px;
 }
 
 .seccion-nosotros {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+seccion-nosotros:hover ~ .seccion-historia .logo-historia img,
+.seccion-nosotros:hover ~ .seccion-historia .texto-historia {
+    opacity: 1;
+    transform: scale(1) translateY(0); 
 }
 
 .marco-nosotros {
     position: relative;
     width: 250px;
-    height: 350px;
+    height: 320px;
     margin: 15px;    
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .marco-nosotros:hover {
@@ -57,13 +74,15 @@ body {
 
 .logo-historia img {
     width: 250px;
+    border-radius: 50%;
     height: auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .texto-historia {
-    max-width: 600px;
+    max-width: 620px;
     text-align: left;
+    transition: all 0.5s ease-in-out;
 }
 
 .texto-historia h2 {
@@ -85,3 +104,9 @@ body {
     text-align: center;
 }
 
+.logo-historia img, 
+.texto-historia h2, 
+.texto-historia h3, 
+.texto-historia p {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
