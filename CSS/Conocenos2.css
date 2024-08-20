@@ -7,7 +7,6 @@ body {
 }
 
 .main {
-    padding: 20px;
     text-align: center;
 }
 
@@ -110,3 +109,48 @@ seccion-nosotros:hover ~ .seccion-historia .logo-historia img,
 .texto-historia p {
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
+
+.seccion-fiesta {
+    margin: 0;
+    padding: 0;
+    background-color: #D69E32;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.fondo-fiesta {
+    background-image: url('/Imagenes/Conocenos2 copy/fondo-fiesta-conocenos.png');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    color: white;
+}
+
+.fondo-fiesta h2 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Tropika', sans-serif;
+}
+
+.imagenes-fiesta {
+    display: flex;
+}
+
+.imagenes-fiesta img {
+    width: 50%;
+    height: auto;
+}
+
+.texto-fiesta {
+    font-size: 1.2em;
+    color: black;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
