@@ -13,6 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
         cartContainer.innerHTML = ''; // Limpiar el contenedor del carrito
         let total = 0;
 
+        if (cart.length === 0) {
+            buyNowButton.style.display = 'none'; // Ocultar el botón si el carrito está vacío
+        } else {
+            buyNowButton.style.display = 'block'; // Mostrar el botón si hay productos
+        }
+
         cart.forEach(item => {
             const cartItem = document.createElement('div');
             cartItem.className = 'cart-item';
