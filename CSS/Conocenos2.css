@@ -34,12 +34,6 @@ body {
     margin-bottom: 40px;
 }
 
-seccion-nosotros:hover ~ .seccion-historia .logo-historia img,
-.seccion-nosotros:hover ~ .seccion-historia .texto-historia {
-    opacity: 1;
-    transform: scale(1) translateY(0); 
-}
-
 .marco-nosotros {
     position: relative;
     width: 250px;
@@ -139,12 +133,48 @@ seccion-nosotros:hover ~ .seccion-historia .logo-historia img,
 
 .imagenes-fiesta {
     display: flex;
-}
-
-.imagenes-fiesta img {
-    width: 50%;
+    width: 100%;
     height: auto;
 }
+
+.imagen-container, 
+.imagenes-fiesta img:last-child {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-principal, .imagen-hover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: block;
+    max-width: none;
+    max-height: none;
+}
+
+.imagen-hover {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+.imagen-container:hover .imagen-hover {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.imagen-container:hover .imagen-principal {
+    opacity: 0;
+    transform: scale(1.1);
+}
+
 
 .texto-fiesta {
     font-size: 1.2em;
@@ -153,4 +183,3 @@ seccion-nosotros:hover ~ .seccion-historia .logo-historia img,
     max-width: 800px;
     margin: 40px auto;
 }
-

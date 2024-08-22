@@ -1,18 +1,16 @@
 /* Custom Scrollbar */
+/* Ocultar el scrollbar en navegadores basados en WebKit */
 ::-webkit-scrollbar {
-    width: 8px; /* Un scrollbar más delgado */
+    width: 0px;
+    height: 0px;
 }
 
-::-webkit-scrollbar-track {
-    background: #D69E32; /* Color de fondo del track, más claro y sutil */
+/* Ocultar el scrollbar en navegadores basados en Gecko (como Firefox) */
+html {
+    scrollbar-width: none; /* Desactivar el scrollbar */
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #B8860B; /* Color del thumb, un tono dorado suave */
-    border-radius: 10px;        /* Borde redondeado del thumb */
-    border: 2px solid #D69E32;  /* Borde del thumb, del mismo color que el track para un efecto suave */
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #C19A6B;  /* Un tono más claro para el hover, sutil */
+/* Para otros elementos, también puedes hacer esto */
+element {
+    overflow: hidden; /* Oculta cualquier scrollbar y contenido desbordante */
 }
