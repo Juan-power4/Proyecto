@@ -141,7 +141,7 @@ body {
 
 .imagen-container {
     position: relative;
-    overflow: hidden; /* Asegura que el texto no salga del contenedor */
+    overflow: hidden;
 }
 
 .texto-hover {
@@ -149,17 +149,17 @@ body {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro con transparencia */
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     text-align: center;
     padding: 10px;
     font-size: 1.2em;
-    opacity: 0; /* Inicialmente invisible */
-    transition: opacity 0.5s ease; /* Transición suave */
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .imagen-container:hover .texto-hover {
-    opacity: 1; /* Aparece el texto al hacer hover */
+    opacity: 1;
 }
 
 .texto-fiesta {
@@ -169,4 +169,33 @@ body {
     max-width: 800px;
     margin: 40px auto;
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .seccion-historia {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .marco-nosotros {
+        position: relative;
+        width: 250px;
+        height: auto;
+        margin: 15px;    
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .logo-historia {
+        margin-bottom: 20px;
+    }
+
+    .texto-historia {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 }
