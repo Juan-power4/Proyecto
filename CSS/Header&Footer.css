@@ -173,3 +173,80 @@ header img:hover {
     width: auto;
     margin-left: 4.5rem;
 }
+
+/* Dispositivos con ancho máximo de 768px (tabletas) */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Aumentar el espacio entre las secciones del footer */
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-address {
+        padding-left: 0;
+        text-align: center;
+        margin-bottom: 10px; /* Añadir un margen inferior para separar la dirección de las otras secciones */
+    }
+
+    .footer-address p {
+        margin: 5px 0;
+    }
+
+    .footer-right h2 {
+        font-size: 20px;
+        width: 100%;
+        margin-bottom: 10px; /* Añadir un margen inferior para separar el título de las redes sociales */
+    }
+
+    .footer-social {
+        margin-top: 10px;
+        gap: 15px; /* Aumentar el espacio entre los iconos de redes sociales */
+    }
+}
+
+/* Estilos para dispositivos con ancho máximo de 480px (móviles) */
+@media (max-width: 480px) {
+    .footer {
+        padding: 15px 5px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-left, .footer-right {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-address p {
+        margin: 5px 0;
+    }
+
+    .footer-right h2 {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .footer-social {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .footer-social img {
+        max-width: 25px;
+    }
+}
