@@ -40,8 +40,8 @@ async function enviarPedido() {
         Direction: document.getElementById('address').value,
         Products: cart.map(item => ({
             id: item.name, // Usar el nombre del plato como ID
-            price: item.price,
-            quantity: item.quantity
+            precio: item.price,
+            cantidad: item.quantity
         })),
         Price: totalCalculated
     };
@@ -67,7 +67,7 @@ async function enviarPedido() {
         console.error('Error al enviar el pedido:', error);
         alert('Hubo un error al enviar el pedido, por favor intenta de nuevo.');
     }
-    
+    window.location.href = 'confirmacion.html';
 }
 
 // Manejador para el envío del formulario
