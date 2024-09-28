@@ -2,11 +2,10 @@
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 // Asegurarse de que el total se guarda correctamente desde Carrito.js
-// Revisar si el total está correctamente almacenado, si no, recalcular como solución temporal
 let totalCalculated = parseFloat(localStorage.getItem('orderTotal')) || 0;
 
+// Recalcular el total si no está disponible
 if (!totalCalculated) {
-    // Recalcular el total si no está disponible
     totalCalculated = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 }
 
@@ -18,8 +17,8 @@ function displayCartSummary() {
     // Limpiar los elementos actuales del contenedor
     itemList.innerHTML = '';
 
-     // Mostrar los nombres de los platos con la cantidad
-     cart.forEach(item => {
+    // Mostrar los nombres de los platos con la cantidad
+    cart.forEach(item => {
         const listItem = document.createElement('li');
         listItem.textContent = `${item.name} x${item.quantity}`; // Mostrar el nombre del plato con su cantidad
         itemList.appendChild(listItem);
@@ -32,21 +31,47 @@ function displayCartSummary() {
 // Ejecutar la función al cargar la página
 document.addEventListener('DOMContentLoaded', displayCartSummary);
 
-// Función para manejar el envío del formulario
-document.getElementById('payment-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-
+// Función para enviar el pedido al servicio web mediante POST
+async function enviarPedido() {
     const orderDetails = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        address: document.getElementById('address').value,
-        paymentMethod: document.getElementById('payment-method').value,
-        cart: cart
+        Name: document.getElementById('name').value,
+        Phone: document.getElementById('telefono').value,
+        Email: document.getElementById('email').value,
+        Direction: document.getElementById('address').value,
+        Products: cart.map(item => ({
+            id: item.name, // Usar el nombre del plato como ID
+            price: item.price,
+            quantity: item.quantity
+        })),
+        Price: totalCalculated
     };
 
-    // Guardar la información de la orden en localStorage
-    localStorage.setItem('orderDetails', JSON.stringify(orderDetails));
+    try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbxN3xWYeWPY2ucmpg59qjGBG5dUIqeuuRMah8gCiCfFWsKM12S2Dru68dNGK_CRD9ml/exec', {
+            method: 'POST',
+            redirect: 'follow',
+            headers: {
+                "Content-Type": "text/plain; charset=utf-8"
+            },
+            body: JSON.stringify(orderDetails)
+        });
+    
+        if (!response.ok) {
+            throw new Error(`Error en la solicitud: ${response.status}`);
+        }
+    
+        const data = await response.json();
+        alert('¡Pedido enviado correctamente!');
+        window.location.href = 'confirmacion.html';
+    } catch (error) {
+        console.error('Error al enviar el pedido:', error);
+        alert('Hubo un error al enviar el pedido, por favor intenta de nuevo.');
+    }
+    
+}
 
-    // Redirigir a una página de confirmación
-    window.location.href = 'confirmacion.html';
+// Manejador para el envío del formulario
+document.getElementById('payment-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    enviarPedido();
 });
